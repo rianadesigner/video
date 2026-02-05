@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小猫咪回家 - 互动游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>小猫咪回家</h1>
+            <div class="game-info">
+                <div class="lives">生命值: <span id="lives">3</span></div>
+                <div class="score">得分: <span id="score">0</span></div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <div class="cat" id="cat">😺</div>
+            <div class="home" id="home">🏠</div>
+            
+            <!-- 障碍物 -->
+            <div class="obstacle" style="top: 20%; left: 30%;">🌳</div>
+            <div class="obstacle" style="top: 40%; left: 60%;">🐕</div>
+            <div class="obstacle" style="top: 70%; left: 20%;">🦮</div>
+            <div class="obstacle" style="top: 50%; left: 80%;">🐕</div>
+            
+            <!-- 食物奖励 -->
+            <div class="food" style="top: 30%; left: 50%;">🐟</div>
+            <div class="food" style="top: 60%; left: 40%;">🐟</div>
+            <div class="food" style="top: 20%; left: 70%;">🐟</div>
+        </div>
+        
+        <div class="controls">
+            <p>使用键盘方向键或屏幕按钮来移动小猫咪</p>
+            <div class="keyboard-controls">
+                <button id="up">↑</button>
+                <div>
+                    <button id="left">←</button>
+                    <button id="down">↓</button>
+                    <button id="right">→</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>游戏说明:</h3>
+            <ul>
+                <li>帮助小猫咪 🐱 回到家 🏠</li>
+                <li>收集鱼儿 🐟 可以获得分数</li>
+                <li>避开其他动物 🐕🦮 以免失去生命值</li>
+                <li>生命值耗尽游戏结束</li>
+            </ul>
+        </div>
+        
+        <div id="game-over" class="game-over hidden">
+            <h2>游戏结束!</h2>
+            <p>最终得分: <span id="final-score">0</span></p>
+            <button id="restart">重新开始</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
